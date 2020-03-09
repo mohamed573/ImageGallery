@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
+    app:startDestination="@id/homepage">
+
+    <fragment
+        android:id="@+id/homepage"
+        android:name="com.example.githubapiparsing.overview.Homepage"
+        android:label="Homepage" >
+        <action
+            android:id="@+id/action_homepage_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.githubapiparsing.details.DetailFragment"
+        android:label="DetailFragment">
+        <argument
+            android:name="selected_user"
+            app:argType="com.example.githubapiparsing.domain.DomainModel"/>
+    </fragment>
+</navigation>
